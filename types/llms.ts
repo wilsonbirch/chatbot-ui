@@ -31,6 +31,8 @@ export type AnthropicLLMID =
   | "claude-3-sonnet-20240229" // Claude 3 Sonnet
   | "claude-3-opus-20240229" // Claude 3 Opus
   | "claude-3-5-sonnet-20240620" // Claude 3.5 Sonnet
+  | "claude-3-5-sonnet-20240620" // Claude 3.5 Sonnet
+  | "claude-3-7-sonnet-20250225" // Claude 3.7 Sonnet
 
 // Mistral Models
 export type MistralLLMID =
