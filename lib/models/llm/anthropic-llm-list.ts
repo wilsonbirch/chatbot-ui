@@ -3,7 +3,7 @@ import { LLM } from "@/types"
 const ANTHROPIC_PLATFORM_LINK =
   "https://docs.anthropic.com/claude/reference/getting-started-with-the-api"
 
-// Anthropic Models (UPDATED 06/20/24) -----------------------------
+// Anthropic Models (UPDATED 02/25/25) -----------------------------
 
 // Claude 2 (UPDATED 12/21/23)
 const CLAUDE_2: LLM = {
@@ -101,11 +101,28 @@ const CLAUDE_3_5_SONNET: LLM = {
   }
 }
 
+// Claude 3.7 Sonnet (UPDATED 02/25/25)
+const CLAUDE_3_7_SONNET: LLM = {
+  modelId: "claude-3-7-sonnet-20250225",
+  modelName: "Claude 3.7 Sonnet",
+  provider: "anthropic",
+  hostedId: "claude-3-7-sonnet-20250225",
+  platformLink: ANTHROPIC_PLATFORM_LINK,
+  imageInput: true,
+  pricing: {
+    currency: "USD",
+    unit: "1M tokens",
+    inputCost: 3,
+    outputCost: 15
+  }
+}
+
 export const ANTHROPIC_LLM_LIST: LLM[] = [
   CLAUDE_2,
   CLAUDE_INSTANT,
   CLAUDE_3_HAIKU,
   CLAUDE_3_SONNET,
   CLAUDE_3_OPUS,
-  CLAUDE_3_5_SONNET
+  CLAUDE_3_5_SONNET,
+  CLAUDE_3_7_SONNET
 ]
